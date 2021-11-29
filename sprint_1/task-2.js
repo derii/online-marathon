@@ -10,19 +10,8 @@ function isNumber(n) {
 	return Number(n) === n;
 }
 function combineArray(arr1, arr2) {
-	let digitArray1 = [];
-	let digitArray2 = [];
-	for (let i = 0; i < arr1.length; i++) {
-		if (isNumber(arr1[i])) {
-			digitArray1 = digitArray1.concat(arr1[i]);
-		}
-	}
-	for (let j = 0; j < arr2.length; j++) {
-		if (isNumber(arr2[j])) {
-			digitArray2 = digitArray2.concat(arr2[j]);
-		}
-	}
+	let digitArray1 = arr1.filter((arr1) => isNumber(arr1));
+	let digitArray2 = arr2.filter((arr2) => isNumber(arr2));
 	return digitArray1.concat(digitArray2)
 }
-console.log(combineArray([12, 'User01»', 22, true, -8],
-	['Index', 6, null, 15])); // [12, 22, -8, 6, 15]
+console.log(combineArray([12, "User01", 22, true, -8], ["Index", 6, null, 15])); // [12, 22, -8, 6, 15]
