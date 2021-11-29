@@ -25,9 +25,9 @@ function checkAdult(age) {
 				throw new Error('Please, enter your age');
 			case age < 0:
 				throw new Error('Please, enter positive number');
-			case isNaN(age) === true:
+			case isNaN(age):
 				throw new Error('Please, enter number');
-			case age % 1 !== 0:
+			case !Number.isInteger(age):
 				throw new Error('Please, enter Integer number');
 			case age < 18:
 				throw new Error('Access denied - you are too young!');
