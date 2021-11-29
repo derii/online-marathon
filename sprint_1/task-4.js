@@ -10,11 +10,20 @@
 */
 
 // factorial with recursion
+/*
 function factorial(n) {
 	if (n === 0 || n === 1) { return 1; }
 	else { return n * factorial(n - 1); }
 }
-
+*/
+function factorial(n) {
+	let factorialArray = [];
+	if (n == 0 || n == 1)
+		return 1;
+	if (factorialArray[n] > 0)
+		return factorialArray[n];
+	return factorialArray[n] = factorial(n - 1) * n;
+}
 function processArray(arr, factorial) {
 	return arr.map(factorial)
 }
