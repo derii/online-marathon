@@ -15,7 +15,7 @@ function longestLogin(loginList) {
 			if (acc.length > item.length) {
 				return acc
 			}
-			else { return item }
+			return item
 		}
 	)
 	return findMaxLengthLogin
