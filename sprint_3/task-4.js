@@ -29,12 +29,6 @@ class Student {
 	};
 
 	nameIncludes(data) {
-		/*
-		if (this.showFullName(data).includes(data)) {
-			return true
-		}
-		return false
-		*/
 		return this.showFullName(data).includes(data)
 	};
 
